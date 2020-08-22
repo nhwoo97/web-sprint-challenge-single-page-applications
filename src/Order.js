@@ -131,6 +131,17 @@ export default function Order(props) {
           </label>
         </div>
 
+        <label>
+            <h3>Gluten Free?</h3>
+            <input
+                type="checkbox"
+                name='glutenfree'
+                checked={values.topping.glutenfree === true}
+                onChange={onCheckboxChange}
+            >
+            </input>
+        </label>
+
         <label htmlFor="special">
           <h3>Special Instructions</h3>
         </label>

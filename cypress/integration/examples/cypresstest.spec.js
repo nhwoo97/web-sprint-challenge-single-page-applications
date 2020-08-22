@@ -16,6 +16,11 @@ describe("Input and add user button", () => {
     cy.get("select").select("small")
     .should("have.value", "small");
   });
+  it("Special Input", () => {
+    cy.get('textarea[name="special"]')
+      .type("whateveritis")
+      .should("have.value", "whateveritis");
+  });
   it("check that checkbox", () => {
     cy.get('[type="checkbox"]').check().should("have.value", "on");
   });

@@ -18,6 +18,7 @@ const initialFormValues = {
     pineapple: false,
     chicken: false,
     blackOlives: false,
+    glutenfree: false,
   },
 };
 const initialFormErrors = {
@@ -82,7 +83,7 @@ export default function App() {
       username: formValues.username.trim(),
       address: formValues.address.trim(),
       size: formValues.size.trim(),
-      special: formValues.special.trim(),
+      special: formValues.special,
       topping: Object.keys(formValues.topping).filter(
         (top) => formValues.topping[top]
       ),
